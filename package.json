@@ -1,0 +1,14 @@
+{
+  "name": "it20275860",
+  "version": "1.0.0",
+  "description": "Sample lab assesment ",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "Ramath Manjitha",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4"
+  }
+}
