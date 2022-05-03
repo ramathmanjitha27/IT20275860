@@ -25,6 +25,25 @@ const getItem = (id)=>{
     return items.get(id);
 }
 
-module.exports = {addItem, getItems,getItem}
+const updateItem = (id, {name, price, description, quantity}) =>{
+    let msg;
+    const item = {
+        id,
+        name,
+        price,
+        description,
+        quantity
+    }
+    if (items.has(id)) {
+        msg = 'Item updated'
+        items.set(id, item)
+    }
+        else
+            msg = 'item not updated'
+
+    return msg;
+}
+
+module.exports = {addItem, getItems,getItem, updateItem}
 
 

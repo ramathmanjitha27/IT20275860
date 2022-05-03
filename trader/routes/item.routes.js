@@ -1,5 +1,5 @@
 const Router = require('@koa/router');
-const {addItem, getItems, getItem} = require('../api/item.api');
+const {addItem, getItems, getItem, updateItem} = require('../api/item.api');
 
 console.log('Item routes Called');
 
@@ -22,5 +22,12 @@ router.get('/:id', ctx => {
     const id = ctx.params.id;
     ctx.body = getItem(id);
 });
+
+router.put('/edititem/:id', ctx =>{
+    const id = ctx.params.id;
+    let item = ctx.request.body;
+    let editItem = updateItem(id, item);
+    ctx.body = editItem;
+})
 
 module.exports = router;
