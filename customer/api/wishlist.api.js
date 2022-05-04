@@ -2,7 +2,7 @@ const { v4 : uuid } = require('uuid');
 
 console.log('Wishlist API Called');
 
-const wishList = new Map();
+const wishLists = new Map();
 
 const addWishList = ({id,name, price, description, quantity})=>{
     const wishID = uuid();
@@ -14,11 +14,11 @@ const addWishList = ({id,name, price, description, quantity})=>{
         description,
         quantity
     }
-        wishList.set(wishID, cusWishList);
+        wishLists.set(wishID, cusWishList);
 }
 
 const getWishList = ()=>{
-    return [...wishList.values()]
+    return [...wishLists.values()]
 }
 
 
