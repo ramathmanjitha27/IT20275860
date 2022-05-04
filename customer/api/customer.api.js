@@ -13,7 +13,7 @@ const registerCus = ({cusName, cusEmail, cusGender})=>{
         cusGender
     }
     customers.set(cusID, customer)
-    return customer;
+
 }
 
 const getCustomer = ()=> {
