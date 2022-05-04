@@ -4,12 +4,15 @@ console.log('Wishlist API Called');
 
 const wishList = new Map();
 
-const addWishList = ({cusID, itemID})=>{
+const addWishList = ({id,name, price, description, quantity})=>{
     const wishid = uuid();
     const cusWishList ={
         wishid,
-        cusID,
-        itemID
+        id,
+        name,
+        price,
+        description,
+        quantity
     }
         wishList.set(wishid, cusWishList);
 }
@@ -18,15 +21,6 @@ const getWishList = ()=>{
     return [...wishList.values()]
 }
 
-const getWishCus = (cusID)=>{
 
-    if(wishList.has(cusID)){
-        return [...wishList.values(cusID === cusID)]
-    }
-    else {
-        let msg = 'Not found in wish list'
-        return msg;
-    }
-}
 
-module.exports = {addWishList, getWishList, getWishCus}
+module.exports = {addWishList, getWishList}

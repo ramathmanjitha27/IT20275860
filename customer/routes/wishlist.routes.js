@@ -1,6 +1,6 @@
 const Router = require('@koa/router');
 
-const {addWishList, getWishList, getWishCus} = require('../api/wishlist.api');
+const {addWishList, getWishList} = require('../api/wishlist.api');
 const {getItem} = require("../../trader/api/item.api");
 
 console.log('Wish List Routes called')
@@ -19,10 +19,5 @@ router.post('/', ctx =>{
 router.get('/', ctx =>{
     ctx.body = getWishList();
 })
-
-router.get('/:id', ctx => {
-    const id = ctx.params.id;
-    ctx.body = getWishCus(id);
-});
 
 module.exports = router;
