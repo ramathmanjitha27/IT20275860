@@ -5,16 +5,16 @@ console.log('Wishlist API Called');
 const wishList = new Map();
 
 const addWishList = ({id,name, price, description, quantity})=>{
-    const wishid = uuid();
+    const wishID = uuid();
     const cusWishList ={
-        wishid,
+        wishID,
         id,
         name,
         price,
         description,
         quantity
     }
-        wishList.set(wishid, cusWishList);
+        wishList.set(wishID, cusWishList);
 }
 
 const getWishList = ()=>{
