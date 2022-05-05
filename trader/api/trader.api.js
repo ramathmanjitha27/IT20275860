@@ -4,13 +4,13 @@ console.log('Trader API Called');
 
 const traders = new Map();
 
-const registerTrader = ({trName, trEmail, trGender})=>{
+const registerTrader = ({trName, trEmail, trAddres})=>{
     const trID = uuid();
     const trader = {
         trID,
         trName,
         trEmail,
-        trGender
+        trAddres
     }
     traders.set(trID, trader)
 
