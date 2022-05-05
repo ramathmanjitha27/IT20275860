@@ -28,7 +28,7 @@ export default function  ViewInventItem(){
                 quantity
             }
 
-            axios.put('http://localhost:3001/item/edititem'+id, newInventItem).then(() => {
+            axios.post('http://localhost:3001/item/edititem/'+id, newInventItem).then(() => {
                 alert("Item details updated")
                 window.location.href = "/traderhome";
             }).catch((err) => {

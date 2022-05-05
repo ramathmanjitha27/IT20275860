@@ -7,6 +7,7 @@ const cartListRoutes = require('./customer/routes/cart.routes')
 const customerRoutes = require('./customer/routes/customer.routes')
 const traderRoutes = require('./trader/routes/trader.routes')
 const promotionRoutes = require('./trader/routes/promotion.routes')
+const purchseRoutes = require('./customer/routes/purchase.routes')
 
 const app = new Koa();
 app.use(cors())
@@ -24,6 +25,8 @@ app.use(ItemRoutes.routes())
     .use(traderRoutes.allowedMethods())
     .use(promotionRoutes.routes())
     .use(promotionRoutes.allowedMethods())
+    .use(purchseRoutes.routes())
+    .use(purchseRoutes.allowedMethods())
 
 app.listen(3001);
 console.log('Application is running on port 3000');

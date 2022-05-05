@@ -37,13 +37,20 @@ export default function Item(){
                 <Link to={'/viewWish-List'}>
                     <button>view Wish List</button>
                 </Link>
+
+            <br/>
+            <br/>
+
+            <Link to={'/purchase'}>
+                <button>Purchase History</button>
+            </Link>
             <br/>
             <br/>
             <table>
                 <thead>
                 <tr>
                     <th>Item name</th>
-                    <th>price</th>
+                    <th>price       </th>
                     <th>Quantity</th>
                     <th>Actions</th>
                     <th></th>
@@ -97,6 +104,23 @@ export default function Item(){
                         })
                     }
 
+                    const addpurchase = (item) =>{
+                        let {id, name, price, description, quantity} = item;
+                        const newPurchase = {
+                            id,
+                            name,
+                            price,
+                            description,
+                            quantity
+                        }
+
+                        axios.post('http://localhost:3001/purchase', newPurchase).then(()=>{
+                            alert(`Purchased Successfully...`)
+                        }).catch((err)=>{
+                            alert(err)
+                        })
+                    }
+
 
                     return (
                         <tr>
@@ -114,6 +138,10 @@ export default function Item(){
                             </td>
                             <td>
                                 <button onClick={()=>addcart(item)}>Add to Cart</button>
+                            </td>
+
+                            <td>
+                                <button onClick={()=>addpurchase(item)}>purchase</button>
                             </td>
                         </tr>
                     )

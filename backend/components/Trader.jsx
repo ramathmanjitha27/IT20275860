@@ -18,7 +18,7 @@ export default function Trader(){
         }
 
         axios.post('http://localhost:3001/trader', newTrader).then(()=>{
-            alert(`The name ${trName} ${trEmail} ${trAddres}`)
+            alert(`Trader registered successfully...`)
             window.location.href = "/traderhome";
 
         }).catch((err)=>{

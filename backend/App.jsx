@@ -14,6 +14,7 @@ import ViewPromotion from "./components/ViewPromotion";
 import ViewCustomers from "./components/ViewCustomers";
 import ViewWishList from "./components/ViewWishList";
 import ViewCart from "./components/ViewCart";
+import Purchase from "./components/Purchase";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
                                 <Route path="/viewCustomer" element={<ViewCustomers/>}/>
                                 <Route path="/viewWish-List" element={<ViewWishList/>}/>
                                 <Route path="/viewCart" element={<ViewCart/>}/>
+                                <Route path="/purchase" element={<Purchase/>}/>
                         </Routes>
                 </BrowserRouter>
         </div>

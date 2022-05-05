@@ -23,7 +23,7 @@ router.get('/:id', ctx => {
     ctx.body = getItem(id);
 });
 
-router.put('/edititem/:id', ctx =>{
+router.post('/edititem/:id', ctx =>{
     const id = ctx.params.id;
     let item = ctx.request.body;
     let editItem = updateItem(id, item);

@@ -18,7 +18,7 @@ export default function AddItem(){
         }
 
         axios.post('http://localhost:3001/item', newItem).then(()=>{
-            alert(`The item added ${name} ${price} ${quantity}`)
+            alert(`The item added Successfully`)
             window.location.href = "/traderhome";
 
         }).catch((err)=>{
