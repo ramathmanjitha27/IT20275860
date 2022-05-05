@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Item from './components/Item'
 import Customer from "./components/Customer";
 import Trader from "./components/Trader";
+import ViewItem from "./components/ViewItem";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
                                 <Route path="/item" element = {<Item/>}/>
                                 <Route path="/customer" element = {<Customer/>}/>
                                 <Route path="/trader" element={<Trader/>}/>
+                                <Route path="/viewitem/:id" element={<ViewItem/>}/>
                         </Routes>
                 </BrowserRouter>
         </div>
