@@ -2,6 +2,7 @@ import React from "react"
 import { useState } from 'react';
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import {Link} from "react-router-dom";
 
 export default function Customer(){
 
@@ -32,7 +33,7 @@ export default function Customer(){
     return(
         <div>
             <h1>Welcome to customer page</h1>
-
+            <h2>Register Customer</h2>
             <form onSubmit={handleSubmit}>
 
                 <label>Name </label>
@@ -62,6 +63,13 @@ export default function Customer(){
 
                 <input type="submit"/>
             </form>
+
+            <br/>
+            <br/>
+            <label>Nevigate to Customer Main Page : </label>
+            <Link to={'/item'}>
+                <button>Customer Main Page</button>
+            </Link>
         </div>
     )
 }

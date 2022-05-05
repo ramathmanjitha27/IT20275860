@@ -13,6 +13,7 @@ import AddPromotion from "./components/AddPromotion";
 import ViewPromotion from "./components/ViewPromotion";
 import ViewCustomers from "./components/ViewCustomers";
 import ViewWishList from "./components/ViewWishList";
+import ViewCart from "./components/ViewCart";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
                                 <Route path="/viewpromotion" element={<ViewPromotion/>}/>
                                 <Route path="/viewCustomer" element={<ViewCustomers/>}/>
                                 <Route path="/viewWish-List" element={<ViewWishList/>}/>
+                                <Route path="/viewCart" element={<ViewCart/>}/>
                         </Routes>
                 </BrowserRouter>
         </div>

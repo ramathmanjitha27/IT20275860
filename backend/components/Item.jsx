@@ -27,13 +27,17 @@ export default function Item(){
         <div>
             <h1>Item Page</h1>
             <br/>
+                <Link to={'/viewCart'}>
+                    <button>view Cart</button>
+                </Link>
 
-                <button>view Cart</button>
+               <br/>
+                <br/>
 
                 <Link to={'/viewWish-List'}>
                     <button>view Wish List</button>
                 </Link>
-
+            <br/>
             <br/>
             <table>
                 <thead>
@@ -76,6 +80,23 @@ export default function Item(){
                             })
                         }
 
+                    const addcart = (item) =>{
+                        let {id, name, price, description, quantity} = item;
+                        const newCart = {
+                            id,
+                            name,
+                            price,
+                            description,
+                            quantity
+                        }
+
+                        axios.post('http://localhost:3001/cart', newCart).then(()=>{
+                            alert(`Added to the Cart`)
+                        }).catch((err)=>{
+                            alert(err)
+                        })
+                    }
+
 
                     return (
                         <tr>
@@ -92,13 +113,23 @@ export default function Item(){
                                 <button onClick={()=>addWish(item)}>Add to wish list</button>
                             </td>
                             <td>
-                                <button>Add to Cart</button>
+                                <button onClick={()=>addcart(item)}>Add to Cart</button>
                             </td>
                         </tr>
                     )
                 })}
                 </tbody>
             </table>
+
+            <br/>
+            <br/>
+
+            <center>
+                <label>Quick Link to Trader Page   </label>
+                <Link to={'/trader'}>
+                    <button>Trader Page</button>
+                </Link>
+            </center>
         </div>
 
 

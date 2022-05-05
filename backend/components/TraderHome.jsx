@@ -32,6 +32,17 @@ export default function TraderHome(){
             <Link to={'/viewpromotion'}>
                 <button>View promotion</button>
             </Link>
+            <br/>
+            <br/>
+
+                <br/>
+                <br/>
+
+                <label>Quick Link to Customer Page   </label>
+                <Link to={'/customer'}>
+                    <button>Customer Page</button>
+                </Link>
+
 
         </div>
     )

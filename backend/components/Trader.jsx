@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 export default function Trader(){
 
@@ -61,6 +62,12 @@ export default function Trader(){
 
                 <input type="submit"/>
             </form>
+            <br/>
+            <br/>
+            <label>nevigate to Trader Main Page  </label>
+            <Link to={'/traderhome'}>
+                <button>Trader Main Page</button>
+            </Link>
         </div>
     )
 }
