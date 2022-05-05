@@ -11,6 +11,7 @@ import ViewInventory from "./components/ViewInventory";
 import ViewInventItem from "./components/ViewInventItem";
 import AddPromotion from "./components/AddPromotion";
 import ViewPromotion from "./components/ViewPromotion";
+import ViewCustomers from "./components/ViewCustomers";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                                 <Route path="/ViewInventItem/:id" element={<ViewInventItem/>}/>
                                 <Route path="/add-promotion" element={<AddPromotion/>}/>
                                 <Route path="/viewpromotion" element={<ViewPromotion/>}/>
+                                <Route path="/viewCustomer" element={<ViewCustomers/>}/>
                         </Routes>
                 </BrowserRouter>
         </div>

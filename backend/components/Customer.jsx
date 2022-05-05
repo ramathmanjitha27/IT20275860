@@ -19,7 +19,6 @@ export default function Customer(){
         }
 
         axios.post('http://localhost:3001/customer', newCustomer).then(()=>{
-            alert(`The name ${cusName} ${cusEmail} ${cusAddres}`)
             window.location.href = "/item";
 
         }).catch((err)=>{
