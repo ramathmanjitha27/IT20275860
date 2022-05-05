@@ -12,6 +12,7 @@ import ViewInventItem from "./components/ViewInventItem";
 import AddPromotion from "./components/AddPromotion";
 import ViewPromotion from "./components/ViewPromotion";
 import ViewCustomers from "./components/ViewCustomers";
+import ViewWishList from "./components/ViewWishList";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                                 <Route path="/add-promotion" element={<AddPromotion/>}/>
                                 <Route path="/viewpromotion" element={<ViewPromotion/>}/>
                                 <Route path="/viewCustomer" element={<ViewCustomers/>}/>
+                                <Route path="/viewWish-List" element={<ViewWishList/>}/>
                         </Routes>
                 </BrowserRouter>
         </div>

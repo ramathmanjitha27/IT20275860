@@ -30,8 +30,9 @@ export default function Item(){
 
                 <button>view Cart</button>
 
-
-                <button>view Wish List</button>
+                <Link to={'/viewWish-List'}>
+                    <button>view Wish List</button>
+                </Link>
 
             <br/>
             <table>
@@ -58,6 +59,24 @@ export default function Item(){
                         localStorage.setItem('description',description)
                     }
 
+                    const addWish = (item) =>{
+                        let {id, name, price, description, quantity} = item;
+                        const newWish = {
+                            id,
+                            name,
+                            price,
+                            description,
+                            quantity
+                        }
+
+                            axios.post('http://localhost:3001/wish', newWish).then(()=>{
+                                alert(`Added to the Wishlist`)
+                            }).catch((err)=>{
+                                alert(err)
+                            })
+                        }
+
+
                     return (
                         <tr>
                             <td>{item.name}</td>
@@ -69,7 +88,8 @@ export default function Item(){
                                 </Link>
                             </td>
                             <td>
-                                <button>Add to wish list</button>
+
+                                <button onClick={()=>addWish(item)}>Add to wish list</button>
                             </td>
                             <td>
                                 <button>Add to Cart</button>
