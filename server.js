@@ -1,4 +1,5 @@
 const Koa = require('koa');
+const cors = require('@koa/cors')
 const bodyParser = require('koa-bodyparser')
 const ItemRoutes = require('./trader/routes/item.routes');
 const WishList = require('./customer/routes/wishlist.routes')
@@ -8,6 +9,7 @@ const traderRoutes = require('./trader/routes/trader.routes')
 const promotionRoutes = require('./trader/routes/promotion.routes')
 
 const app = new Koa();
+app.use(cors())
 app.use(bodyParser());
 
 app.use(ItemRoutes.routes())

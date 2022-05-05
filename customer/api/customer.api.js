@@ -4,13 +4,13 @@ console.log('Customer API Called');
 
 const customers = new Map();
 
-const registerCus = ({cusName, cusEmail, cusGender})=>{
+const registerCus = ({cusName, cusEmail, cusAddres})=>{
     const cusID = uuid();
     const customer = {
         cusID,
         cusName,
         cusEmail,
-        cusGender
+        cusAddres
     }
     customers.set(cusID, customer)
 
