@@ -32,6 +32,7 @@ export default function Trader(){
     return(
         <div>
             <h1>Welcome to Trader Page</h1>
+            <h2>Register Trader</h2>
 
             <form onSubmit={handleSubmit}>
 
